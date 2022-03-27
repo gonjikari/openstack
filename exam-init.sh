@@ -1,5 +1,3 @@
-#!/bin/bash
-
 openstack domain create ex210
 openstack project create --domain ex210 engineering
 openstack user create --domain ex210 --project engineering --project-domain ex210 --password redhat --email robert@gmail.com robert
@@ -25,3 +23,7 @@ openstack flavor create --disk 10 --ram 2048 --vcpus 1 m1.petite
 wget http://materials.example.com/osp-small.qcow2
 openstack image create --disk-format qcow2 --file  osp-small.qcow2 --public web
 tar -zcvf file1.tar.gz templates
+wget https://raw.githubusercontent.com/vinodkaravati/openstack-practice/master/webserver.sh
+wget https://raw.githubusercontent.com/vinodkaravati/openstack-practice/master/user-data.file
+wget http://materials.example.com/heat/labserver-with-floatingip.yaml
+wget https://raw.githubusercontent.com/vinodkaravati/openstack-practice/master/ceph.repo
